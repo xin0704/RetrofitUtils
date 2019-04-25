@@ -1,2 +1,2 @@
 # RetrofitUtils
-基于retrofit2.0封装的网络请求工具 通过rxjava2.0做线程切换 用rxLifecycle做生命周期绑定 防止rxjava引起的内存泄漏
+基于retrofit2.0封装的网络请求工具 通过rxjava2.0做线程切换 用rxLifecycle做生命周期绑定 防止rxjava引起的内存泄漏 另外通过自定义Interceptor来处理数据缓存
