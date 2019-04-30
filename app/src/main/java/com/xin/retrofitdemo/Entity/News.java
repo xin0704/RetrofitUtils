@@ -1,4 +1,4 @@
-package com.xin.retrofitdemo;
+package com.xin.retrofitdemo.Entity;
 
 import java.util.List;
 

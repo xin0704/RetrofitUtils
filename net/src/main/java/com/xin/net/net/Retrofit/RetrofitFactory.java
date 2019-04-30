@@ -36,7 +36,7 @@ public class RetrofitFactory {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 //添加缓存拦截器
-                .addInterceptor(new CacheInterceptor(context))
+                .addInterceptor(new CacheInterceptor(context.getApplicationContext()))
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .writeTimeout(60, TimeUnit.SECONDS)

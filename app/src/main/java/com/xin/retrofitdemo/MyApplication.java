@@ -2,6 +2,7 @@ package com.xin.retrofitdemo;
 
 import android.app.Application;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.xin.net.Util.Config.Config;
 import com.xin.net.net.Base.ProxyFactory;
 import com.xin.net.net.Retrofit.RetrofitUtil;
@@ -24,6 +25,11 @@ public class MyApplication extends Application {
         Config.SUCCESS_CODE = 0;
         //初始化Retrofit网络请求工具
         ProxyFactory.obtain().init(new RetrofitUtil());
+
+        if (LeakCanary.isInAnalyzerProcess(this)){
+            return;
+        }
+        LeakCanary.install(this);
     }
 
     public static MyApplication getApplication(){

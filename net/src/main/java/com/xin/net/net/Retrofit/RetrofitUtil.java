@@ -32,7 +32,7 @@ public class RetrofitUtil implements IHttp {
         RequestBody body = RequestBody.create(JSON, jsonStr);
 
         RetrofitFactory.obtain()
-                .createService(context, baseUrl, ApiService.class)
+                .createService(((RxAppCompatActivity) context).getApplication(), baseUrl, ApiService.class)
                 .loadData(url, body)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
